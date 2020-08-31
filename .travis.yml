@@ -3,9 +3,9 @@ language: c
 dist: bionic
 services:
   - docker
-  
+sudo: required  
 script:
   - rm -rf /usr/local/share/man
-  - docker run -t ppc64le/centos:7 bash -c 'rm -rf /usr/local/share/man; du'
-  - docker run -t centos:7 bash -c 'rm -rf /usr/local/share/man; du'
-  - docker run -t ubuntu:18.04 bash -c 'rm -rf /usr/local/share/man; du'
+  - docker run -t ppc64le/centos:7 bash -c 'rm -rf /usr/local/share/man;'
+  - sudo cat /var/log/dmesg 
+  - sudo cat /var/log/messages
