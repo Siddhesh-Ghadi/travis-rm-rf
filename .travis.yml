@@ -7,5 +7,4 @@ sudo: required
 script:
   - rm -rf /usr/local/share/man
   - docker run -t ppc64le/centos:7 bash -c 'rm -rf /usr/local/share/man;'
-  - sudo cat /var/log/dmesg 
-  - sudo cat /var/log/messages
+  - sudo dmesg 
