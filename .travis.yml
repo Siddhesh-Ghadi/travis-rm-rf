@@ -6,7 +6,7 @@ services:
 sudo: required  
 script:
   - sudo rm -rf /usr/local/share/man
-  - docker run -t centos:7 bash -c 'rm -rf /usr/local/share/man'
+  - docker run -t centos:7 bash -c 'rm -rf /usr/local/share/*'
   - docker run -t ppc64le/centos:8 bash -c 'rm -rf /usr/local/share/man'
   - docker run -t registry.access.redhat.com/ubi7 bash -c 'rm -rf /usr/local/share/man'
   - docker run -t registry.access.redhat.com/ubi8 bash -c 'rm -rf /usr/local/share/man'
