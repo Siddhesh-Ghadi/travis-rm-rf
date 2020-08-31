@@ -1,6 +1,8 @@
 arch: ppc64le
-language: c
-dist: bionic
+jobs:
+  include:
+    - dist: xenial
+    - dist: bionic
 services:
   - docker
 sudo: required  
