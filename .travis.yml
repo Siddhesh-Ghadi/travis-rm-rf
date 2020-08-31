@@ -5,6 +5,5 @@ services:
   - docker
 sudo: required  
 script:
-  - rm -rf /usr/local/share/man
-  - docker run -t ppc64le/centos:7 bash -c 'rm -rf /usr/local/share/man;'
-  - sudo dmesg 
+  - sudo rm -rf /usr/local/share/man
+  - docker run -t ppc64le/centos:7 bash -c 'ls -la /usr/local/share/; rm -rf /usr/local/share/man;touch /usr/local/share/test'
