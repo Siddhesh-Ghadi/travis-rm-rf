@@ -1,0 +1,9 @@
+arch: ppc64le
+language: c
+dist: bionic
+services:
+  - docker
+  
+script:
+  - rm -rf /usr/local/share/man
+  - docker run -t ppc64le/centos:7 bash -c 'yum update -y && yum install git -y && rm -rf /usr/local/share/man'
