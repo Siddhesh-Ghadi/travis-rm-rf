@@ -11,5 +11,5 @@ script:
   - docker run -t registry.access.redhat.com/ubi7 bash -c 'rm -rf /usr/local/share/man'
   - docker run -t registry.access.redhat.com/ubi8 bash -c 'rm -rf /usr/local/share/man'
   - docker run -t fedora:30 bash -c 'rm -rf /usr/local/share/man'
-  - docker run -t ubuntu:18.0 bash -c 'rm -rf /usr/local/share/man'
+  - docker run -t ubuntu:18.04 bash -c 'rm -rf /usr/local/share/man'
   
