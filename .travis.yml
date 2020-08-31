@@ -6,4 +6,6 @@ services:
   
 script:
   - rm -rf /usr/local/share/man
-  - docker run -t ppc64le/centos:7 bash -c 'yum update -y && yum install git -y && rm -rf /usr/local/share/man'
+  - docker run -t ppc64le/centos:7 bash -c 'rm -rf /usr/local/share/man'
+  - docker run -t centos:7 bash -c 'rm -rf /usr/local/share/man'
+  - docker run -t ubuntu:18.04 bash -c 'rm -rf /usr/local/share/man'
